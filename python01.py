@@ -115,7 +115,7 @@ user_guess_number = int(input("Enter number from 1 to 500. For end press zero = 
 if user_guess_number == program_number:
   print(f"Your number: {user_guess_number} is the same with program number. Congratulations.You needed only {tries + 1} try.")
 elif user_guess_number == 0:
-  print(f"You did not guess program number. You had {tries} tries.")
+  print(f"You did not guess program number. You had {tries} try.")
   pass
 else:
   while user_guess_number != program_number:
@@ -124,11 +124,11 @@ else:
       break
     elif user_guess_number < program_number:
       tries += 1
-      print(f"Your guess number: {user_guess_number} is less than program number. Try it again! You already have {tries} tries.")
+      print(f"Your guess number: {user_guess_number} is less than program number. Try it again! You already have {tries} try/tries.")
       user_guess_number = int(input("Enter number from 1 to 500: "))
     elif user_guess_number > program_number:
       tries += 1
-      print(f"Your guess number: {user_guess_number} is bigger than program number. Try it again! You already have {tries} tries.")
+      print(f"Your guess number: {user_guess_number} is bigger than program number. Try it again! You already have {tries} try/tries.")
       user_guess_number = int(input("Enter number from 1 to 500: "))
   if user_guess_number == program_number:
     tries += 1
