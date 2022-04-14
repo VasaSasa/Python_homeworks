@@ -62,21 +62,65 @@
 
 #task 2 and 3 
 
+#number_1 = int(input("Enter number one: "))
+#number_2 = int(input("Enter number two: "))
+
+#even_numbers = []
+#o#dd_numbers = []
+
+#for number in range(number_1, number_2 + 1):
+    #if number % 2 == 0:
+        #even_numbers.append(number)
+    #else:
+        #odd_numbers.append(number)
+
+#print("Even numbers are:", even_numbers)
+#print("Odd numbers are:", odd_numbers)
+
+
+#task 4
+#number_1 = int(input("Enter number one: "))
+#number_2 = int(input("Enter number two: "))
+
+#for number in range(number_1,number_2 -1,-1):
+    #print(number)
+
+#task 5
+#number_1 = int(input("Enter number one: "))
+#number_2 = int(input("Enter number two: "))
+#odd_numbers = []
+
+
+#if number_1 < number_2:
+    #for number in range(number_1, number_2 + 1):
+        #if number % 2 == 1:
+            #odd_numbers.append(number)
+            #print(number)
+#if number_1 > number_2:
+    #for number in range(number_2, number_1 + 1):
+        #if number % 2 == 1:
+           # odd_numbers.append(number)
+            #print(number)
+
+#print("Odd numbers are:", odd_numbers)
+
 number_1 = int(input("Enter number one: "))
 number_2 = int(input("Enter number two: "))
-
-even_numbers = []
 odd_numbers = []
 
-for number in range(number_1, number_2 + 1):
-    if number % 2 == 0:
-        even_numbers.append(number)
-    else:
-        odd_numbers.append(number)
 
-print("Even numbers are:", even_numbers)
+if number_1 < number_2:
+    for number in range(number_1, number_2 + 1):
+        if number % 2 == 1:
+            odd_numbers.append(number)
+            #print(number)
+if number_1 > number_2:
+    for number in range(number_2, number_1 + 1):
+        if number % 2 == 1:
+            odd_numbers.append(number)
+            #print(number)
+
 print("Odd numbers are:", odd_numbers)
-
 
 
 

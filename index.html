@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <h1>Homework 14042022</h1>
+    <h1 class="headline">Homework 14042022</h1>
 
 <pre>
     <h1>TASK 1.The user types in two numbers.<br>Print all the numbers in the specified range.</h1>
@@ -45,11 +45,56 @@ print("Odd numbers are:", odd_numbers)
 </pre>
 
 <pre>
-    <h1>The user types in two numbers.<br>Print all numbers in the specified range in descending order.</h1>
+    <h1>TASK 4.The user types in two numbers.<br>Print all numbers in the specified range in descending order.</h1>
+number_1 = int(input("Enter number one: "))
+number_2 = int(input("Enter number two: "))
+
+for number in range(number_1,number_2 -1,-1):
+    print(number)
 </pre>
 
 <pre>
-    <h1></h1>
+    <h1>TASK 5. The user types in two numbers. Print all odd numbers in
+the specified range. If the end and start points of the range
+are incorrect, normalize them. Let’s say the user typed in 33
+and 13, normalization will assign 13 to the start and 33 to the
+end of the range.</h1>
+<span>Solution 1</span>
+
+number_1 = int(input("Enter number one: "))
+number_2 = int(input("Enter number two: "))
+
+if number_1 < number_2:
+    for number in range(number_1, number_2 + 1):
+        if number % 2 == 1:
+            print(number)
+if number_1 > number_2:
+    for number in range(number_2, number_1 + 1):
+        if number % 2 == 1:
+            print(number)
+
+<span>Solution 2 with "list"</span>
+
+number_1 = int(input("Enter number one: "))
+number_2 = int(input("Enter number two: "))
+
+odd_numbers = []
+
+if number_1 < number_2:
+    for number in range(number_1, number_2 + 1):
+        if number % 2 == 1:
+            odd_numbers.append(number)
+if number_1 > number_2:
+    for number in range(number_2, number_1 + 1):
+        if number % 2 == 1:
+            odd_numbers.append(number)
+
+print("Odd numbers are:", odd_numbers)
+
+<span>Solution 3</span>
+
+
+
 </pre>
 
 <pre>

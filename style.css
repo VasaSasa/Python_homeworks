@@ -6,3 +6,21 @@ span {
 pre {
     font-size: 20px;
 }
+
+.headline {
+    color: rgba(42, 169, 42, 0.689);
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: blue;
+    border: 40px groove red;
+    border-bottom: 40px ridge red;
+    border-right:40px ridge red ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 1em;
+}
+
