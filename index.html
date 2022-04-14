@@ -120,11 +120,11 @@ else:
       break
     elif user_guess_number < program_number:
       tries += 1
-      print(f"Your guess number: {user_guess_number} is less than program number. Try it again! You already have {tries} tries.")
+      print(f"Your guess number: {user_guess_number} is less than program number. Try it again! You already have {tries} try/tries.")
       user_guess_number = int(input("Enter number from 1 to 500: "))
     elif user_guess_number > program_number:
       tries += 1
-      print(f"Your guess number: {user_guess_number} is bigger than program number. Try it again! You already have {tries} tries.")
+      print(f"Your guess number: {user_guess_number} is bigger than program number. Try it again! You already have {tries} try/tries.")
       user_guess_number = int(input("Enter number from 1 to 500: "))
   if user_guess_number == program_number:
     tries += 1
