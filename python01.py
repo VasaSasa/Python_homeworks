@@ -104,23 +104,39 @@
 
 #print("Odd numbers are:", odd_numbers)
 
-number_1 = int(input("Enter number one: "))
-number_2 = int(input("Enter number two: "))
-odd_numbers = []
+import random
+number = range(1,501)
+tries = 0
+program_number = random.choice(number)
+print("You should not see this but program number is:", program_number,":-)")
+user_guess_number = int(input("Enter number from 1 to 500. For end press zero = 0: "))
 
 
-if number_1 < number_2:
-    for number in range(number_1, number_2 + 1):
-        if number % 2 == 1:
-            odd_numbers.append(number)
-            #print(number)
-if number_1 > number_2:
-    for number in range(number_2, number_1 + 1):
-        if number % 2 == 1:
-            odd_numbers.append(number)
-            #print(number)
+if user_guess_number == program_number:
+  print(f"Your number: {user_guess_number} is the same with program number. Congratulations.You needed only {tries + 1} try.")
+elif user_guess_number == 0:
+  print(f"You did not guess program number. You had {tries} tries.")
+  pass
+else:
+  while user_guess_number != program_number:
+    if user_guess_number == 0:
+      print(f"You did not guess program number. You had {tries} tries.")
+      break
+    elif user_guess_number < program_number:
+      tries += 1
+      print(f"Your guess number: {user_guess_number} is less than program number. Try it again! You already have {tries} tries.")
+      user_guess_number = int(input("Enter number from 1 to 500: "))
+    elif user_guess_number > program_number:
+      tries += 1
+      print(f"Your guess number: {user_guess_number} is bigger than program number. Try it again! You already have {tries} tries.")
+      user_guess_number = int(input("Enter number from 1 to 500: "))
+  if user_guess_number == program_number:
+    tries += 1
+    print(f"You have just guessed right number!! You needed {tries} tries.")
 
-print("Odd numbers are:", odd_numbers)
+
+
+print("Gameover")
 
 
 

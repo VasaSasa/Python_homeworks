@@ -90,15 +90,50 @@ if number_1 > number_2:
             odd_numbers.append(number)
 
 print("Odd numbers are:", odd_numbers)
-
-<span>Solution 3</span>
-
-
-
 </pre>
 
 <pre>
-    <h1></h1>
+    <h1>TASK 6.Develop a game Guess the Number. The program chooses
+a number in the range from 1 to 500. The user tries to guess it.
+After each try, the program gives hints on whether the number
+is greater or less than the guessed number. In the end, the
+program displays statistics: how many tries it took to guess
+the number, how long it took. Provide an exit by entering 0 if
+the user is tired of guessing the number.</h1>
+import random
+number = range(1,501)
+tries = 0
+program_number = random.choice(number)
+print("You should not see this but program number is:", program_number,":-)")
+user_guess_number = int(input("Enter number from 1 to 500. For end press zero = 0: "))
+
+
+if user_guess_number == program_number:
+  print(f"Your number: {user_guess_number} is the same with program number. Congratulations.You needed only {tries + 1} try.")
+elif user_guess_number == 0:
+  print(f"You did not guess program number. You had {tries} tries.")
+  pass
+else:
+  while user_guess_number != program_number:
+    if user_guess_number == 0:
+      print(f"You did not guess program number. You had {tries} tries.")
+      break
+    elif user_guess_number < program_number:
+      tries += 1
+      print(f"Your guess number: {user_guess_number} is less than program number. Try it again! You already have {tries} tries.")
+      user_guess_number = int(input("Enter number from 1 to 500: "))
+    elif user_guess_number > program_number:
+      tries += 1
+      print(f"Your guess number: {user_guess_number} is bigger than program number. Try it again! You already have {tries} tries.")
+      user_guess_number = int(input("Enter number from 1 to 500: "))
+  if user_guess_number == program_number:
+    tries += 1
+    print(f"You have just guessed right number!! You needed {tries} tries.")
+
+
+
+print("Gameover")
+
 </pre>
 
 <pre>
